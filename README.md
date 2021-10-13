@@ -21,7 +21,7 @@
 | ------------ | ---------- | ----------- |
 | prize_name   | text       | null: false |
 | machine_name | text       | null: false |
-| type         | text       | null: false |
+| category     | text       | null: false |
 | user         | references | null: false |
 
 ### Association
