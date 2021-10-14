@@ -3,4 +3,9 @@ class BoothsController < ApplicationController
 
   def index
   end
+
+  def new
+    @booth = Booth.new
+  end
+  
 end
