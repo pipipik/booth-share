@@ -9,4 +9,6 @@ class User < ApplicationRecord
     validates :name, :occupation, :position
   end
 
+  has_many :booths
+  
 end
