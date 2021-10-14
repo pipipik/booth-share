@@ -2,6 +2,7 @@ class BoothsController < ApplicationController
   before_action :authenticate_user!, except: [:index]
 
   def index
+    @booths = Booth.all.order("id DESC")
   end
 
   def new
