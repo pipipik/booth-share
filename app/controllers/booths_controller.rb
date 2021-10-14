@@ -1,5 +1,5 @@
 class BoothsController < ApplicationController
-  before_action :authenticate_user!, except: [:index]
+  before_action :authenticate_user!, except: [:index, :show]
 
   def index
     @booths = Booth.all.order("id DESC")
@@ -16,6 +16,10 @@ class BoothsController < ApplicationController
     else
       render :new
     end
+  end
+
+  def show
+    @booth = Booth.find(params[:id])
   end
   
   private

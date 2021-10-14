@@ -1,0 +1,34 @@
+<main class="main">
+  <div class="inner">
+    <div class="booth__wrapper">
+      <p class="booth__hedding">
+         <%= @booth.prize_name %>
+      </p>
+      <%= link_to "by#{@booth.user.name}", root_path, class: :booth__user %>
+      <% if user_signed_in? && current_user.id == @booth.user_id %>
+        <div class="booth__manage">
+          <%= link_to "編集する", root_path, class: :booth__btn %>
+          <%= link_to "削除する", root_path, class: :booth__btn %>
+        </div>
+      <% end %>
+      <div class="booth__image">
+          <%= image_tag @booth.image, class: 'booth-image' %>
+      </div>
+      <div class="booth__body">
+        <div class="booth__detail">
+          <p class="detail__title">機械名</p>
+          <p class="detail__message">
+            <%= @booth.machine_name %>
+          </p>
+        </div>
+        <div class="booth__detail">
+          <p class="detail__title">カテゴリー</p>
+          <p class="detail__message">
+            <%= @booth.category %>
+          </p>
+        </div>
+      </div>
+
+    </div>
+  </div>
+</main>
