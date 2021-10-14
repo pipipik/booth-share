@@ -1,0 +1,25 @@
+<%= form_with(model: booth, local: true) do |f|%>
+  <div class="field">
+    <%= f.label :prize_name, "景品名" %><br />
+    <%= f.text_field :prize_name %>
+  </div>
+
+  <div class="field">
+    <%= f.label :machine_name, "機械名" %><br />
+    <%= f.text_area :machine_name, class: :form__text %>
+  </div>
+
+  <div class="field">
+    <%= f.label :category, "カテゴリー" %><br />
+    <%= f.text_area :category, class: :form__text %>
+  </div>
+
+  <div class="field">
+    <%= f.label :image, "ブースの画像" %><br />
+    <%= f.file_field :image %>
+  </div>
+
+  <div class="actions">
+    <%= f.submit "保存する", class: :form__btn  %>
+  </div>
+<% end %>
