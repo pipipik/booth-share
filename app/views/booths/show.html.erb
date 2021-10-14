@@ -8,7 +8,7 @@
       <% if user_signed_in? && current_user.id == @booth.user_id %>
         <div class="booth__manage">
           <%= link_to "編集する", edit_booth_path(@booth.id), class: :booth__btn %>
-          <%= link_to "削除する", root_path, class: :booth__btn %>
+          <%= link_to "削除する", booth_path(@booth.id), method: :delete, class: :booth__btn %>
         </div>
       <% end %>
       <div class="booth__image">

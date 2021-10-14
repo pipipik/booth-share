@@ -35,6 +35,12 @@ class BoothsController < ApplicationController
       render :edit
     end
   end
+
+  def destroy
+    @booth = Booth.find(params[:id])
+    @booth.destroy
+    redirect_to root_path
+  end
   
   private
   
