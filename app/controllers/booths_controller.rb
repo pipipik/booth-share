@@ -21,6 +21,20 @@ class BoothsController < ApplicationController
   def show
     @booth = Booth.find(params[:id])
   end
+
+  def edit
+    @booth = Booth.find(params[:id])
+  end
+
+  def update
+    @booth = Booth.find(params[:id])
+    @booth.update(booth_params)
+    if @booth.save
+      redirect_to booth_path
+    else
+      render :edit
+    end
+  end
   
   private
   
