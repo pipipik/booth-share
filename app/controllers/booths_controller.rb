@@ -17,6 +17,10 @@ class BoothsController < ApplicationController
       render :new
     end
   end
+
+  def show
+    @booth = Booth.find(params[:id])
+  end
   
   private
   
