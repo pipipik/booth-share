@@ -1,0 +1,13 @@
+<div class="card">
+  <%= link_to image_tag(booth.image, class: :card__img), booth_path(booth.id), method: :get %>
+  <div class="card__body">
+    <%= link_to booth.prize_name, booth_path(booth.id), method: :get, class: :card__title%>
+    <p class="card__summary">
+      <%= booth.machine_name %>
+    </p>
+    <p class="card__summary">
+      <%= booth.category %>
+    </p>
+    <%= link_to "by#{booth.user.name}", "/users/#{booth.user_id}", class: :card__user %>
+  </div>
+</div>
