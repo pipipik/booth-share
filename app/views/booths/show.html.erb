@@ -4,7 +4,7 @@
       <p class="booth__hedding">
          <%= @booth.prize_name %>
       </p>
-      <%= link_to "by#{@booth.user.name}", root_path, class: :booth__user %>
+      <%= link_to "by#{@booth.user.name}", "/users/#{@booth.user_id}", class: :booth__user %>
       <% if user_signed_in? && current_user.id == @booth.user_id %>
         <div class="booth__manage">
           <%= link_to "編集する", edit_booth_path(@booth.id), class: :booth__btn %>
