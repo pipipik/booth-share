@@ -50,5 +50,6 @@ test:
 production:
   <<: *default
   database: booth_share_production
-  username: booth_share
-  password: <%= ENV['BOOTH_SHARE_DATABASE_PASSWORD'] %>
+  username: root
+  password: <%= ENV['DATABASE_PASSWORD'] %>
+  socket: /var/lib/mysql/mysql.sock
