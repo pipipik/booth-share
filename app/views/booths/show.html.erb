@@ -40,6 +40,14 @@
             </div>
           <% end %>
         <% end %>
+        <ul class="comments_lists">
+          <% @comments.each do |comment| %>
+            <li class="comments_list">
+              <%= comment.text %>
+              <%= link_to comment.user.name, "/users/#{comment.user.id}", class: :comment_user %>
+            </li>
+          <% end %>
+        </ul>
       </div>
     </div>
   </div>
