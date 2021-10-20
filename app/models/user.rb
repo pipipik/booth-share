@@ -10,5 +10,5 @@ class User < ApplicationRecord
   end
 
   has_many :booths
-  
+  has_many :comments
 end
