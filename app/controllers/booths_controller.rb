@@ -20,6 +20,7 @@ class BoothsController < ApplicationController
 
   def show
     @booth = Booth.find(params[:id])
+    @comment = Comment.new
   end
 
   def edit
