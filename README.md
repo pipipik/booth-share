@@ -22,6 +22,7 @@
 | prize_name   | text       | null: false |
 | machine_name | text       | null: false |
 | category     | text       | null: false |
+| price        | integer    | null: false |
 | user         | references | null: false |
 
 ### Association
