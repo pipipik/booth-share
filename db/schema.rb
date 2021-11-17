@@ -34,9 +34,10 @@ ActiveRecord::Schema.define(version: 2021_10_20_134206) do
   end
 
   create_table "booths", options: "ENGINE=InnoDB DEFAULT CHARSET=utf8", force: :cascade do |t|
-    t.text "prize_name"
-    t.text "machine_name"
-    t.text "category"
+    t.text "prize_name", null: false
+    t.text "machine_name", null: false
+    t.text "category", null: false
+    t.integer "price", null: false
     t.bigint "user_id"
     t.datetime "created_at", precision: 6, null: false
     t.datetime "updated_at", precision: 6, null: false
