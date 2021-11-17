@@ -47,7 +47,7 @@ class BoothsController < ApplicationController
   private
   
   def booth_params
-    params.require(:booth).permit(:image, :prize_name, :machine_name, :category).merge(user_id: current_user.id)
+    params.require(:booth).permit(:image, :prize_name, :machine_name, :category, :price).merge(user_id: current_user.id)
   end
   
 end
