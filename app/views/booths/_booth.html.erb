@@ -8,6 +8,9 @@
     <p class="card__summary">
       <%= booth.category %>
     </p>
+    <p class="card__summary">
+      ¥<%= booth.price %>
+    </p>
     <%= link_to "by#{booth.user.name}", "/users/#{booth.user_id}", class: :card__user %>
   </div>
 </div>

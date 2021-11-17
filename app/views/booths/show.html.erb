@@ -27,6 +27,12 @@
             <%= @booth.category %>
           </p>
         </div>
+        <div class="booth__detail">
+          <p class="detail__title">単価</p>
+          <p class="detail__message">
+            ¥<%= @booth.price %>
+          </p>
+        </div>
       </div>
       <div class="booth__comments">
         <% if user_signed_in? %>
